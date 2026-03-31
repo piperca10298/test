@@ -1,0 +1,30 @@
+
+> neurogrid@0.1.0 predev
+> npm run db:init
+
+
+> neurogrid@0.1.0 db:init
+> node scripts/init-db.mjs
+
+
+> neurogrid@0.1.0 dev
+> node --experimental-strip-types server.mts
+
+> NeuroGrid server ready on http://localhost:3000 (development)
+○ Compiling / ...
+ GET / 200 in 7.6s (next.js: 5.3s, application-code: 2.2s)
+ POST /api/auth/signup 200 in 1351ms (next.js: 393ms, application-code: 958ms)
+ POST /api/auth/signup 200 in 969ms (next.js: 8ms, application-code: 961ms)
+ POST /api/conversations 201 in 534ms (next.js: 283ms, application-code: 252ms)
+ POST /api/messages 201 in 331ms (next.js: 263ms, application-code: 68ms)
+ POST /api/messages 201 in 51ms (next.js: 9ms, application-code: 42ms)
+ GET /api/messages?conversationId=cmnem36pc0002n0vuhpg3xvld 200 in 69ms (next.js: 5ms, application-code: 63ms)
+ POST /api/messages/hide 200 in 791ms (next.js: 730ms, application-code: 61ms)
+ GET /api/messages?conversationId=cmnem36pc0002n0vuhpg3xvld 200 in 38ms (next.js: 6ms, application-code: 32ms)
+ PATCH /api/messages 200 in 56ms (next.js: 6ms, application-code: 50ms)
+ GET /api/messages?conversationId=cmnem36pc0002n0vuhpg3xvld 200 in 90ms (next.js: 50ms, application-code: 40ms)
+ POST /api/messages/hide 200 in 46ms (next.js: 4ms, application-code: 42ms)
+ GET /api/messages?conversationId=cmnem36pc0002n0vuhpg3xvld 200 in 34ms (next.js: 4ms, application-code: 30ms)
+ POST /api/messages/hide 401 in 31ms (next.js: 12ms, application-code: 19ms)
+ GET / 200 in 1383ms (next.js: 13ms, application-code: 1370ms)
+ GET /chat 307 in 1829ms (next.js: 1421ms, application-code: 408ms)

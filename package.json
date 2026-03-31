@@ -1,0 +1,40 @@
+{
+  "name": "neurogrid",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "db:init": "node scripts/init-db.mjs",
+    "predev": "npm run db:init",
+    "dev": "node --experimental-strip-types server.mts",
+    "build": "next build",
+    "start": "node --experimental-strip-types server.mts --prod",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@prisma/adapter-better-sqlite3": "^7.5.0",
+    "@prisma/client": "^7.5.0",
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.5.0",
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^17.3.1",
+    "framer-motion": "^12.38.0",
+    "jose": "^6.2.2",
+    "lucide-react": "^1.7.0",
+    "next": "16.2.1",
+    "prisma": "^7.5.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "socket.io": "^4.8.3",
+    "socket.io-client": "^4.8.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
