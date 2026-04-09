@@ -1,4 +1,4 @@
-import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
+import { PrismaPg } from "@prisma/adapter-pg";
 
 import { PrismaClient } from "@/generated/prisma/client";
 
@@ -12,14 +12,10 @@ if (!connectionString) {
   throw new Error("Missing DATABASE_URL environment variable.");
 }
 
-const adapter = new PrismaBetterSqlite3({
-  url: connectionString,
-});
-
 export const prisma =
   globalForPrisma.prisma ??
   new PrismaClient({
-    adapter,
+    adapter: new PrismaPg({ connectionString }),
     log: process.env.NODE_ENV === "development" ? ["error"] : ["error"],
   });
 
