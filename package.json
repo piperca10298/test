@@ -2,11 +2,15 @@
   "name": "neurogrid",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "scripts": {
     "db:init": "node scripts/init-db.mjs",
     "predev": "npm run db:init",
     "dev": "node --experimental-strip-types server.mts",
-    "build": "next build",
+    "prisma:generate": "prisma generate",
+    "build": "prisma generate && next build",
     "start": "node --experimental-strip-types server.mts --prod",
     "lint": "eslint",
     "postinstall": "prisma generate"
